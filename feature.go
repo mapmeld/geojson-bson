@@ -18,7 +18,7 @@ type BoundingBox []float64
 //   included as a member of the feature object with the name "id".
 type Feature struct {
 	Type       string                 `json:"type"`
-	Id         interface{}            `json:"id,omitempty" bson:"id,omitempty"`
+	Id         interface{}            `json:"id,omitempty" bson:"_id,omitempty"`
 	Geometry   interface{}            `json:"geometry"`
 	Properties map[string]interface{} `json:"properties"`
 	Bbox       BoundingBox            `json:"bbox,omitempty" bson:"bbox,omitempty"`
